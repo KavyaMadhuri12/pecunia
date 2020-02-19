@@ -1,4 +1,4 @@
-package com.cg.pecunia.dao;
+ package com.cg.pecunia.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +14,7 @@ public class AccountDaoImpl implements AccountDAO {
 	{
 		map= new HashMap<Integer,Account>();
 	}
+	
 	@Override
 	public int creditSlip(Slip slip) throws AccountException {
 		
@@ -29,5 +30,10 @@ public class AccountDaoImpl implements AccountDAO {
 		
 		return 0;
 	}
-	
-}																		
+
+}
+
+
+
+
+
