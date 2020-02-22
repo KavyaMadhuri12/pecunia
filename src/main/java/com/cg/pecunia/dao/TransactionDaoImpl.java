@@ -14,13 +14,12 @@ public class TransactionDaoImpl implements TransactionDao{
 		addSomeAccountDetails();
 	}
 	public void addSomeAccountDetails() {
-		TransactionUsingSlip ta1=new TransactionUsingSlip("Rebeca","123456789012",2000,
+		TransactionUsingSlip ta1=new TransactionUsingSlip("Kavya","123456789012",2000,
 				Arrays.asList(new Transaction("1000000001L",LocalDate.now())));
-		TransactionUsingSlip ta2=new TransactionUsingSlip("Prameela","987654321012",3000,
+		TransactionUsingSlip ta2=new TransactionUsingSlip("Madhuri","987654321012",3000,
 				Arrays.asList(new Transaction("1000000002L",LocalDate.now())));
 		transaction.put(ta1.getAccountNumber(), ta1);
 		transaction.put(ta2.getAccountNumber(), ta2);
-		
 	}
 
 	public boolean addAcountDetails(TransactionUsingSlip accountDetails) {
@@ -29,11 +28,10 @@ public class TransactionDaoImpl implements TransactionDao{
 		}
 		transaction.put(accountDetails.getAccountNumber(), accountDetails);
 		return true;
-		
 	}
-    
+   
 	public boolean creditUsingSlip(String userName, String accountNumber,double amount) {
-		//int amount=1000;
+	
 	try {
 			if(amount<=100||amount>=100000) {
 				throw new Exception("Insufficient");
@@ -52,7 +50,7 @@ public class TransactionDaoImpl implements TransactionDao{
 	}
 
 	public boolean debitUsingSlip(String userName, String accountNumber,double amount) {
-		//int amount=10000;
+	
 		try {
 			if(amount<=100||amount>=100000) {
 				throw new Exception("Insufficient");
@@ -68,7 +66,6 @@ public class TransactionDaoImpl implements TransactionDao{
 		System.out.println(e.getMessage());
 	}
 	return false;
-		
 	}
 
 	public int getBalanceById(String accountNumber) {
@@ -85,10 +82,6 @@ public class TransactionDaoImpl implements TransactionDao{
 		return false;
 	}
 		
-//		TransactionUsngSlip transToUpdate=transaction.get(accountNumber.getBalanceById());
-//		transToUpdate.setBalance(accountNumber.getBalance());
-		
-			
 		return true;
 	}
 	
@@ -119,7 +112,4 @@ class AccountException extends Exception{
 	AccountException(String msg){
 		super(msg);
 	}
-
-
-	
 }

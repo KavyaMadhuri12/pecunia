@@ -1,7 +1,5 @@
 package com.cg.pecunia.bean;
 
-
-	//import java.util.Date;
 	import java.time.LocalDate;
 	public class Transaction {
 	String TransactionId;
@@ -56,7 +54,6 @@ package com.cg.pecunia.bean;
 	public String toString() {
 		return "Transaction [TransactionId=" + TransactionId + ", TransactionDate=" + TransactionDate + "]";
 	}
-
-	}
+}
 
 

@@ -24,6 +24,7 @@ public class TransactionUI {
 				debitUsingSlipInfo();
 				break;
 			case 3:
+				System.out.println("THANK YOU");
 					System.exit(0);
 					break;
 			 default:
@@ -39,27 +40,21 @@ public class TransactionUI {
 		String accountNumber=in.next();
 		System.out.println("enter amount to be credited");
 		double amount=in.nextInt();
-		//double balance = 0;
+		
 		if(transactionservice.creditUsingSlip( userName, accountNumber,amount)) {
 			System.out.println("amount deposited successfully");
 		}
-		
-			
-		}
+	}
 	private static void debitUsingSlipInfo() {
 		System.out.println("Enter user name");
 		String userName=in.next()+in.nextLine();
 		System.out.println("enter account number");
 		String accountNumber=in.next();
-		System.out.println("enter amount to be credited");
+		System.out.println("enter amount to be debited");
 		double amount=in.nextInt();
 		
 		if(transactionservice.debitUsingSlip( userName, accountNumber,amount)) {
 			System.out.println("amount withdrawn successfully");
-		
+		}
 	}
-	}
-
-
-
 }

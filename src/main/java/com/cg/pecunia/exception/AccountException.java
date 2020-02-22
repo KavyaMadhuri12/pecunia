@@ -6,7 +6,6 @@ public class AccountException extends Exception{
 	{
 		super(message);
 	}
-	
 	public AccountException()
 	{
 		super();
