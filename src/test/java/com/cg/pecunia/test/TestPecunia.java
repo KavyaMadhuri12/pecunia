@@ -1,4 +1,4 @@
-package com.cg.pecunia;
+package com.cg.pecunia.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

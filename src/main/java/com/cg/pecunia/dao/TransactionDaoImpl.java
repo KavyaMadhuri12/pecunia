@@ -85,7 +85,7 @@ public class TransactionDaoImpl implements TransactionDao{
 		return true;
 	}
 	
-	public boolean deductAmount(String accountNumber,double amount) {
+public boolean deductAmount(String accountNumber,double amount) {
 		if(!transaction.containsKey(accountNumber)) {
 			return false;
 		}
@@ -102,14 +102,4 @@ public boolean addAmount(String accountNumber,double amount) {
 	acc.setBalance(acc.getBalance()+amount);
 	return true;
 }
-}
-class amountLessException extends Exception{
-	amountLessException(String msg){
-		super(msg);
-	}
-}
-class AccountException extends Exception{
-	AccountException(String msg){
-		super(msg);
-	}
 }

@@ -1,9 +1,6 @@
 com\cg\pecunia\service\TransactionServiceImpl.class
 com\cg\pecunia\bean\TransactionUsingSlip.class
 com\cg\pecunia\dao\TransactionDao.class
-com\cg\pecunia\exception\AccountException.class
-com\cg\pecunia\dao\amountLessException.class
-com\cg\pecunia\dao\AccountException.class
 com\cg\pecunia\bean\Transaction.class
 com\cg\pecunia\dao\TransactionDaoImpl.class
 com\cg\pecunia\service\TransactionService.class
