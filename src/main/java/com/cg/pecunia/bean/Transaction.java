@@ -9,6 +9,9 @@ package com.cg.pecunia.bean;
 		TransactionId = transactionId;
 		TransactionDate = transactionDate;
 	}
+	public Transaction() {
+		super();
+	}
 	public String getTransactionId() {
 		return TransactionId;
 	}

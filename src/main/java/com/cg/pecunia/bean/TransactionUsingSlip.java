@@ -14,6 +14,9 @@ public class TransactionUsingSlip {
 		this.balance = balance;
 		this.transactions = transactions;
 	}
+	public TransactionUsingSlip() {
+		super();
+	}
 	public String getUserName() {
 		return userName;
 	}

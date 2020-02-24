@@ -7,7 +7,7 @@ import com.cg.pecunia.dao.TransactionDaoImpl;
 
 public class TransactionUI {
 	static TransactionDao transactionservice=new TransactionDaoImpl();
-	static Scanner in=new Scanner(System.in);
+	static Scanner scanner=new Scanner(System.in);
 	public static void main(String[]args) {
 		for(;;) {
 			int choice;
@@ -15,7 +15,7 @@ public class TransactionUI {
 			System.out.println("1.credit using slip");
 			System.out.println("2.debit using slip");
 			System.out.println("3.Exit");
-			choice=in.nextInt();
+			choice=scanner.nextInt();
 			switch(choice) {
 			case 1:
 				creditUsingSlipInfo();
@@ -35,11 +35,11 @@ public class TransactionUI {
 	}
 	private static void creditUsingSlipInfo() {
 		System.out.println("Enter user name");
-		String userName=in.next()+in.nextLine();
+		String userName=scanner.next()+scanner.nextLine();
 		System.out.println("enter account number");
-		String accountNumber=in.next();
+		String accountNumber=scanner.next();
 		System.out.println("enter amount to be credited");
-		double amount=in.nextInt();
+		double amount=scanner.nextInt();
 		
 		if(transactionservice.creditUsingSlip( userName, accountNumber,amount)) {
 			System.out.println("amount deposited successfully");
@@ -47,11 +47,11 @@ public class TransactionUI {
 	}
 	private static void debitUsingSlipInfo() {
 		System.out.println("Enter user name");
-		String userName=in.next()+in.nextLine();
+		String userName=scanner.next()+scanner.nextLine();
 		System.out.println("enter account number");
-		String accountNumber=in.next();
+		String accountNumber=scanner.next();
 		System.out.println("enter amount to be debited");
-		double amount=in.nextInt();
+		double amount=scanner.nextInt();
 		
 		if(transactionservice.debitUsingSlip( userName, accountNumber,amount)) {
 			System.out.println("amount withdrawn successfully");

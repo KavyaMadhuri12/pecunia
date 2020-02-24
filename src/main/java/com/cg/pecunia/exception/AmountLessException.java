@@ -1,8 +1,8 @@
 package com.cg.pecunia.exception;
 
-public class amountLessException extends Exception {
+public class AmountLessException extends Exception {
 	
-		amountLessException(String msg){
+		AmountLessException(String msg){
 			super(msg);
 		}
 	}
